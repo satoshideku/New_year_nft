@@ -36,6 +36,8 @@
           <form class="mt-5" id="gift-form">
             <label for="address" class="form-label">Who do you want to gift the greeting</label>
             <input type="text" name="address" class="form-control form-control-lg bg-dark text-white" placeholder="e.g 0x7EeF591A6CC0403b9652E98E88476fe1bF31dDeb" id="address">
+            <input type="text" name="to_name" class="form-control form-control-lg bg-dark text-white" placeholder="e.g mark" id="to_name">
+            <input type="text" name="from_name" class="form-control form-control-lg bg-dark text-white" placeholder="e.g jack" id="from_name">
             <div class="text-muted">greeting to self is not allowed</div>
             <button class="btn btn-lg btn-primary mt-3 mb-5">GREET</button>
           </form>
@@ -108,7 +110,7 @@
       }
 
       async function mint() {
-        await contract.methods.gift(document.getElementById('address').value).send({ from: account, value: 5000000000000000000 });
+        await contract.methods.gift(document.getElementById('address').value,document.getElementById('to_name').value,document.getElementById('from_name').value).send({ from: account, value: 5000000000000000000 });
         alert('Congratulations! You just bought Soan Papdi for someone else!')
       }
     </script>
