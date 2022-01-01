@@ -110,7 +110,7 @@
       }
 
       async function mint() {
-        await contract.methods.gift(document.getElementById('address').value,document.getElementById('to_name').value,document.getElementById('from_name').value).send({ from: account, value: 50000000000000000 });
+        await contract.methods.gift(document.getElementById('address').value,document.getElementById('to_name').value,document.getElementById('from_name').value).send({ from: account, value: 5000000000000000000 });
         alert('Congratulations! You just bought Soan Papdi for someone else!')
       }
     </script>
